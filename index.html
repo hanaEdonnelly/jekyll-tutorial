@@ -1,4 +1,14 @@
+---
+# this is an empty front matter
+---
+
 <html>
-<h1>Tutorial</h1>
-<p>Hello, world</p>
+    <body>
+        <div>
+            {% for post in site.posts limit:1 %}
+            <h2>{{ post.scoretitle }}</h2>
+            <p>{{ post.homescore}} - {{ post.opponentscore}} </p>
+            {% endfor %}
+        </div>
+    </body>
 </html>
