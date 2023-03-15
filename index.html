@@ -3,12 +3,48 @@
 ---
 
 <html>
+    <head>
+        <style>
+            #scores-container {
+                width: 100%;
+                background-color: #eaeaea;
+            }
+
+            #scores-container h1, p {
+                text-align: center;
+            }
+
+            .news-container {
+                margin: .25em;
+                background-color: #eaeaea;
+            }
+
+            .individual-news {
+                background-color: #eaeaea;
+                text-align: left;
+                padding: 1em;
+            }
+        </style>
+        <title>Title</title>
+    </head>
     <body>
-        <div>
-            {% for post in site.posts limit:1 %}
-            <h2>{{ post.scoretitle }}</h2>
-            <p>{{ post.homescore}} - {{ post.opponentscore}} </p>
-            {% endfor %}
+        <div id="scores-container">
+            {% for post in site.posts limit:2 %}
+                {% if post.path contains 'scores' %}
+                    <h1>{{ post.title }}</h1>
+                    <p>{{ post.homescore }} - {{ post.opponentscore }}</p>
+                {% endif %}
+            {% endfor %}  
+        </div>
+        <div class="news-container">
+            {% for post in site.posts %}
+                <div class="individual-news">
+                    {% if post.path contains 'news'%}
+                    <h1>{{ post.title }}</h1>
+                    <p style="text-align: left;">{{ post.body }}</p>
+                   {% endif %}
+                </div>
+            {% endfor %}   
         </div>
     </body>
 </html>
