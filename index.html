@@ -4,7 +4,7 @@
 <body>
     {% include navigation.html %}
 
-    <div id="scores-container">
+    <div class="scores-container">
         {% for post in site.posts limit:2 %}
             {% if post.path contains 'scores' %}
                 <h1>{{ post.title }}</h1>
