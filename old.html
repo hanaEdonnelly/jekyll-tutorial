@@ -1,0 +1,26 @@
+---
+layout: page
+title: Home
+---
+<html>
+    <body>
+        <div id="scores-container">
+            {% for post in site.posts limit:2 %}
+                {% if post.path contains 'scores' %}
+                    <h1>{{ post.title }}</h1>
+                    <p>{{ post.homescore }} - {{ post.opponentscore }}</p>
+                {% endif %}
+            {% endfor %}  
+        </div>
+        <div class="news-container">
+            {% for post in site.posts %}
+                <div class="individual-news">
+                    {% if post.path contains 'news'%}
+                    <h1>{{ post.title }}</h1>
+                    <p style="text-align: left;">{{ post.body }}</p>
+                   {% endif %}
+                </div>
+            {% endfor %}   
+        </div>
+    </body>
+</html>
