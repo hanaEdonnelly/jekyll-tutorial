@@ -30,6 +30,8 @@ h1 {
   font-family: "Berlingske Sans Extracondensed", "Impact", sans-serif;
   text-transform: uppercase;
   color: #73000a;
+  text-align: center;
+  margin: 0 auto;
 }
 h2,
 h3,
@@ -83,6 +85,7 @@ header .nav ul {
   padding: 0.5em;
 }
 header .nav ul li {
+  padding: 0.5em;
   text-align: center;
   margin: 0 auto;
   color: #fff;
@@ -126,13 +129,65 @@ header .nav ul li {
   }
 }
 .scores-container {
-  width: 90%;
   background-color: #e3e3e3;
   text-align: center;
-  margin: 2em auto;
+  margin: 2em 1em;
   padding: 1em 0;
+}
+.home-main {
+  margin: auto;
+}
+@media only screen and (max-width: 426px) {
+  .home-main {
+    display: flex;
+    flex-direction: column;
+  }
+  .home-main .left {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 769px) {
+  .home-main {
+    display: flex;
+    flex-direction: column;
+  }
+  .home-main .left {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .home-main {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+  }
+  .home-main * {
+    margin: 0.5em;
+  }
+  .home-main .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 3;
+    margin-right: 0.5em;
+  }
+  .home-main :nth-child(2) {
+    flex: 1;
+  }
+}
+.home-main .news-container {
+  margin: 0 1em;
+}
+.home-main .news-container * {
+  margin: 0.5em 0;
 }
 footer {
   background-color: #000;
   color: #fff;
+  padding: 2em;
+}
+footer img {
+  width: 50px;
 }
