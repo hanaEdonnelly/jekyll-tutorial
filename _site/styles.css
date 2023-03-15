@@ -1,3 +1,49 @@
+@font-face {
+  font-family: 'Berlingske Sans';
+  src: url('https://sc.edu/_global_resources/fonts/BerlingskeSans-Md.woff2') format('woff2'), url('https://sc.edu/_global_resources/fonts/BerlingskeSans-Md.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Berlingske Sans Extrabold';
+  src: url('https://sc.edu/_global_resources/fonts/BerlingskeSans-XBd.woff2') format('woff2'), url('https://sc.edu/_global_resources/fonts/BerlingskeSans-XBd.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Berlingske Sans Extracondensed';
+  src: url('https://sc.edu/_global_resources/fonts/BerlingskeSansXCn-XBd.woff2') format('woff2'), url('https://sc.edu/_global_resources/fonts/BerlingskeSansXCn-XBd.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Berlingske Serif';
+  src: url('https://sc.edu/_global_resources/fonts/BerlingskeSerif-Bd.woff2') format('woff2'), url('https://sc.edu/_global_resources/fonts/BerlingskeSerif-Bd.woff') format('woff');
+  font-weight: 700;
+  font-display: swap;
+}
+/*---- Fonts ----*/
+h1 {
+  font-family: "Berlingske Sans Extracondensed", "Impact", sans-serif;
+  text-transform: uppercase;
+  color: #73000a;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Berlingske Sans Extrabold", "Impact";
+  font-weight: bold;
+  text-transform: capitalize;
+}
+p,
+li {
+  font-family: "Berlingske Sans", "Arial";
+}
 .center {
   text-align: center;
   margin: 0 auto;
@@ -17,6 +63,11 @@ body {
 header {
   width: 100%;
   margin: 0 auto;
+}
+header .hamburger {
+  text-align: left;
+  margin: auto 0 auto 0;
+  padding: 0 5em 0 0;
 }
 header .nav {
   display: flex;

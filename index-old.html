@@ -1,9 +1,9 @@
 ---
-layout: page
-title: CWH
-h1: Home
 ---
+{% include head.html %}
 <body>
+    {% include navigation.html %}
+
     <div class="scores-container">
         {% for post in site.posts limit:2 %}
             {% if post.path contains 'scores' %}
@@ -27,4 +27,7 @@ h1: Home
             {% endfor %}   
         </div>
     </div>
+   
+
+    {% include footer.html %}
 </body>
