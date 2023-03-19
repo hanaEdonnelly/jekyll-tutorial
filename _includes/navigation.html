@@ -1,13 +1,13 @@
 <header>
     <div class="nav">
-        <div class="hamburger"><img src="assets\icons\Hamburger_icon.svg" alt="Navigate menu"></div>
+        <div class="hamburger"><img src="{% link assets/icons/Hamburger_icon.svg %}" alt="Navigate menu"></div>
         <nav id="top">
             <ul>
-                <li>Home</li>
-                <li>News</li>
-                <li>Scores Archive</li>
+                <li><a href="{% link index.html %}">Home</a></li>
+                <li><a href="{% link news.html %}">News</a></li>
+                <li><a href="{% link scores.html %}">Scores Archive</a></li>
             </ul>
         </nav>
-        <div class="logo-nav"><img src="assets\img\CAROLINA HOCKEY 1.1.png" alt="Carolina Women's Hockey logo"></div>
+        <div class="logo-nav"><img src="{% link assets/img/CAROLINA HOCKEY 1.1.png %}" alt="Carolina Women's Hockey logo"></div>
     </div>
 </header>   

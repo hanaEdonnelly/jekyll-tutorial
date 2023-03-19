@@ -1,7 +1,7 @@
 //Constants
-@mobile: ~"max-width: 426px";
-@tablet: ~"max-width: 769px";
-@desktop: ~"min-width: 1024px";
+@mobile: ~"max-width: 425px";
+@tablet: ~"max-width: 768px";
+@desktop: ~"min-width: 769px";
 
 @font-face {
     font-family:'Berlingske Sans';
@@ -70,7 +70,9 @@ p, li {
 
 body {
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 1vh;
 }
 
 header {
@@ -86,6 +88,7 @@ header {
         justify-content: space-around;
         .garnet-bg();
         ul {
+            text-transform: uppercase;
             margin: 0;
             padding: 0;
             display: flex;
@@ -96,6 +99,17 @@ header {
             .center();
             color: #fff;
             list-style: none;
+            a {
+                color: #fff;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            a:hover {
+                color: #ff8791;
+            }
+            a:active {
+                color: #73000a;
+            }
             }
         }
     }
@@ -143,35 +157,31 @@ header {
 .scores-container {
     background-color: #e3e3e3;
     text-align: center;
-    margin: 2em 1em;
     padding: 1em 0;
+    @media only screen and (@desktop) {
+        width: 90%;
+        .center();
+    }
 }
 
 .home-main {
-    margin: auto;
+    margin: 0 1em;
+    display: flex;
+    flex-direction: column;
+    :nth-child(n+1) {
+        margin-top: 1em;
+    }
     @media only screen and (@mobile) {
-        display: flex;
-        flex-direction: column;
         .left {
             .center();
         }
     }
     @media only screen and (@tablet) {
-        display: flex;
-        flex-direction: column;
         .left {
             .center();
         }
     }
     @media only screen and (@desktop) {
-        width: 90%;
-        display: flex;
-        flex-direction: row;
-
-        * {
-            margin: .5em;
-        }
-
         .left {
             display: flex;
             flex-direction: column;
@@ -183,19 +193,39 @@ header {
             flex: 1;
         }
     }
-
     .news-container {
-        margin: 0 1em;
-        * {
-            margin: .5em 0;
+        :nth-child(n+1) {
+            margin-top: 1em;
         }
     }
+}
+
+.content {
+    :nth-child(n+1) {
+        margin-top: 1em;
+    }
+}
+
+.two-column {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn   {
+    background-color: #73000a;
+    color: #fff;
+    border: none;
+    font-family: "Berlingske Sans Extrabold", "Impact";
+    padding: .25em;
+    border-radius: .5em;
+    font-size: 1.17em;
 }
 
 footer {
     background-color: #000;
     color: #fff;
     padding: 2em;
+    margin: 1em auto 0;
     img {
         width: 50px;
     }
