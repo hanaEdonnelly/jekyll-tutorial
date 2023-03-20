@@ -189,6 +189,19 @@ header .nav ul li a:active {
 .home-main .news-container :nth-child(n+1) {
   margin-top: 1em;
 }
+.split {
+  display: flex;
+  flex-direction: row;
+}
+.split :nth-child(1) {
+  flex: 3;
+}
+.split :nth-child(2) {
+  flex: 2;
+}
+.content {
+  margin: 1em;
+}
 .content :nth-child(n+1) {
   margin-top: 1em;
 }
