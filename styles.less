@@ -200,15 +200,23 @@ header {
     }
 }
 
+.individual-news p img {
+    .center();
+}
+
 .split {
-    display: flex;
-    flex-direction: row;
-    :nth-child(1) {
-        flex: 3;
+    @media only screen and (@desktop) {
+        display: flex;
+        flex-direction: row;
+        :nth-child(1) {
+            margin-right: 1em;
+            flex: 3;
+        }
+        :nth-child(2) {
+            flex: 1;
+        }
     }
-    :nth-child(2) {
-        flex: 2;
-    }
+
 }
 
 .content {
@@ -228,8 +236,8 @@ header {
     color: #fff;
     border: none;
     font-family: "Berlingske Sans Extrabold", "Impact";
-    padding: .25em;
-    border-radius: .5em;
+    padding: .3em;
+    border-radius: .25em;
     font-size: 1.17em;
 }
 
